@@ -16,6 +16,11 @@ print("I got my number! Bet you can't guess it!")
 
 while guess != correct_number and guesses_left > 0:
     guess = int(input("What is your guess?"))
+    catch = False
+    while (guess < 1 or guess > 10) and not catch:
+        guess = int(input("Please guess a number between 1 and 10!"))
+        if 1 <= guess <= 10:
+            catch = True
     if guess > correct_number:
         print("Guess lower")
     elif guess < correct_number:
