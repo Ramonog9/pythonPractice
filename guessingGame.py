@@ -2,6 +2,11 @@ import random
 import time
 
 guess = int(input("Welcome to the Guessing Game! You have 3 attempts to guess the correct number between 1 and 10. Press 0 to start!"))
+catch = False
+while guess != 0 and not catch:
+    guess = int(input("Please press 0 to start the game!"))
+    if guess == 0:
+        catch = True
 guesses_left = 3
 time.sleep(3)
 print("Choosing a number!")
