@@ -18,10 +18,12 @@ while guess != correct_number and guesses_left > 0:
     guess = int(input("What is your guess?"))
     if guess > correct_number:
         print("Guess lower")
-    else:
+    elif guess < correct_number:
         print("Guess higher")
+    else:
+        print("You guessed correct!")
     guesses_left -= 1
 if guesses_left == 0 and guess != correct_number:
     print("You're out of guesses! The correct number was:", correct_number)
 else:
-    print("You guessed correct!")
+    print("You're a winner!")
