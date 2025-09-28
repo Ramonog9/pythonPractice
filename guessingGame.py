@@ -8,7 +8,7 @@ while guess != 0 and not catch:
     if guess == 0:
         catch = True
 guesses_left = 3
-time.sleep(3)
+time.sleep(2)
 print("Choosing a number!")
 correct_number = random.randint(1,10)
 time.sleep(2)
